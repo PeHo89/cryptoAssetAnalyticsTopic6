@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>ERC721 Network Visualization</title>
+
+        <link rel="stylesheet" href="./libs/alchemy.css">
+        <link rel="stylesheet" href="./libs/vendor.css">
+    </head>
+    <body>
+        <div style="text-align: center;">
+            <h2>ERC721 Network Visualization</h2>
+            <h4>First 10K Transactions within block number 5M to 5.5M from Ethereum Mainnet aggregated to 1475 unique addresses (blue nodes) including 36 contracts (red nodes) and 1582 transactions (edges)</h4>
+            <b><a href="./index.html">Back</a></b>
+        </div>
+        <hr/>
+        <div id="alchemy" class="alchemy"></div>
+
+        <script src="https://d3js.org/d3.v5.js"></script>
+        <script type="text/javascript" src="./libs/alchemy.js"></script>
+        <script type="text/javascript" src="./libs/vendor.js"></script>
+
+        <script type="text/javascript">
+            var config = {
+                "nodeTypes": {
+                    "role": ["account", "contract"]
+                },
+                "edgeStyle": {
+                    "all": {
+                        "width": 3
+                    }
+                },
+                "nodeStyle" : {
+                    "all": {
+                        "borderWidth": 0
+                    },
+                    "account": {
+                        "color": "#3cbcff"
+                    },
+                    "contract": {
+                        "color": "#ff2f57"
+                    }
+                },
+                "dataSource": "./erc721transactions_graph.json"
+            };
+
+            alchemy.begin(config);
+        </script>
+    </body>
+</html>

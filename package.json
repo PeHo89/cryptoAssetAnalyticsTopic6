@@ -1,0 +1,21 @@
+{
+  "name": "crypto_asset_analytics_-_project_6",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "serve": "serve -l 8000 ./",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Peter Holzer <e01425797@student.tuwien.ac.at>",
+  "license": "ISC",
+  "dependencies": {
+    "chart.js": "^2.8.0",
+    "chartjs-plugin-zoom": "^0.7.0",
+    "fs": "0.0.1-security",
+    "ngraph.centrality": "^2.0.0",
+    "ngraph.graph": "^18.0.0",
+    "serve": "^11.0.0",
+    "web3": "^1.0.0-beta.55"
+  }
+}
